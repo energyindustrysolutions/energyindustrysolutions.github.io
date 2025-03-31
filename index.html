@@ -5,81 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy Industry Solutions</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #333;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 20px;
-        }
-        .header a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-        .container {
-            padding-top: 80px;
-            text-align: center;
-        }
-        .section {
-            padding: 50px 20px;
-        }
-        .image-placeholder {
-            width: 100%;
-            height: 200px;
-            background: #ddd;
-            margin-bottom: 20px;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; scroll-behavior: smooth; background: #f5f5f5; }
+        .container { max-width: 900px; margin: auto; background: white; padding-bottom: 50px; }
+        
+        /* Header */
+        header { background: #000; color: white; padding: 15px 20px; display: flex; justify-content: space-between; 
+                 align-items: center; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; box-sizing: border-box; }
+        .header-content { max-width: 900px; margin: auto; display: flex; justify-content: space-between; width: 100%; }
+        header a { color: white; text-decoration: none; font-size: 16px; }
+        .logo { font-weight: bold; font-size: 18px; }
+        nav { display: flex; gap: 20px; }
+
+        /* Sections */
+        section { padding: 60px 20px; border-bottom: 1px solid #ddd; text-align: center; }
+        h2 { color: #000; }
+        h3 { color: #222; margin-top: 30px; }
+        p { color: #555; line-height: 1.8; max-width: 800px; margin: auto; }
+
+        /* Images */
+        .main-image, .service-image { width: 100%; height: 300px; background: #ccc; display: block; object-fit: cover; }
+        .service-image { margin-bottom: 15px; }
+
+        /* Service Layout */
+        .service { margin-bottom: 80px; } /* Increased space between services */
+
+        /* Contact Form */
+        .contact-form { display: flex; flex-direction: column; align-items: center; }
+        input, textarea { margin: 10px 0; padding: 12px; width: 90%; max-width: 600px; border: 1px solid #ccc; font-size: 16px; }
+        button { background: #004466; color: white; padding: 12px 20px; border: none; cursor: pointer; font-size: 16px; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div>Energy Industry Solutions</div>
-        <div>
+
+<header>
+    <div class="header-content">
+        <a href="#" class="logo">Energy Industry Solutions</a>
+        <nav>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
-        </div>
+        </nav>
     </div>
-    <div class="container">
-        <div class="image-placeholder">[Main Image Placeholder]</div>
-        <div id="services" class="section">
-            <h2>Our Services</h2>
-            <div class="image-placeholder">[Service 1 Image]</div>
+</header>
+
+<div class="container">
+    <img src="header.jpg" alt="Main Image" class="main-image">
+    
+    <section id="about">
+        <h2>About Energy Industry Solutions</h2>
+        <p>Energy Industry Solutions is dedicated to helping energy-intensive businesses and solar companies succeed.  
+           By providing solar panel installation support, strategic marketing services, and high-quality lead generation,  
+           we enable businesses to reduce operational costs, grow their customer base, and transition to sustainable energy solutions.</p>
+        <p>Our comprehensive approach ensures that businesses looking to adopt solar power can do so seamlessly,  
+           while solar installation companies receive the tools and resources they need to thrive in a competitive market.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+
+        <div class="service">
+            <img src="service1.jpg" alt="PV Project" class="service-image">
             <h3>Selling the Initial PV Project</h3>
-            <p>We help businesses transition to solar energy with turnkey solar projects...</p>
-            
-            <div class="image-placeholder">[Service 2 Image]</div>
+            <p>We assist energy-intensive businesses in adopting solar power through a seamless, end-to-end process.  
+               Our services include energy consumption analysis, system design, installer connections, and financing solutions.  
+               Businesses benefit from reduced energy costs, government incentives, and improved sustainability efforts.</p>
+        </div>
+
+        <div class="service">
+            <img src="service2.jpg" alt="Marketing" class="service-image">
             <h3>Marketing Package for Solar Projects</h3>
-            <p>Our marketing solutions boost visibility and drive customer acquisition...</p>
-            
-            <div class="image-placeholder">[Service 3 Image]</div>
+            <p>We provide solar companies with powerful marketing strategies, including targeted digital campaigns,  
+               lead generation, and SEO services. Our approach ensures businesses can effectively reach potential customers,  
+               increase visibility, and convert leads into long-term clients.</p>
+        </div>
+
+        <div class="service">
+            <img src="service3.jpg" alt="Leads" class="service-image">
             <h3>Database of Prospective Clients</h3>
-            <p>We provide qualified leads to solar businesses to streamline sales...</p>
+            <p>Our database includes pre-qualified leads, helping solar companies save time on prospecting and focus on closing deals.  
+               With detailed business profiles and energy consumption insights, our leads are primed for conversion,  
+               allowing solar providers to scale faster and more efficiently.</p>
         </div>
-        <div id="contact" class="section">
-            <h2>Contact Us</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <p>Email: <a href="mailto:contact@energyindustrysolutions.com">contact@energyindustrysolutions.com</a></p>
-        </div>
-    </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+<form action="https://getform.io/f/bdrnmegb" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+    </section>
+</div>
+
 </body>
 </html>
